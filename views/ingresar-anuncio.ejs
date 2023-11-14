@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head.ejs') %>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <br>
+    <h3 style="text-align: center">Agregar Anuncio</h3>
+   <hr>
+<div class="container">
+    <div class="card" style="width: 30rem;">
+        <div class="card-body">
+               <form method="post" action="/anuncio" enctype="multipart/form-data">
+
+                <div class="input-group mb-3">
+                    <label class="input-group-text">Anuncio</label>
+                    <input type="text" aria-label="First name" class="form-control" name="nombre"  required>
+                    
+                  </div>
+
+                  <fieldset> ¿Es una venta?
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="venta" id="flexRadioDefault1" value="true" required >
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Yes
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="venta" id="flexRadioDefault2" value="false" required >
+                    <label class="form-check-label" for="flexRadioDefault2">
+                      No
+                    </label>
+                  </div>
+                  </fieldset>
+
+                 <fieldset>Precio:
+
+                    <div class="input-group mb-3">
+                    <span class="input-group-text">€</span>
+                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" name="precio" required>
+                    <span class="input-group-text">.00</span>
+                </div>
+                 </fieldset>
+                
+
+                <div class="input-group mb-3">
+                    <input type="file" class="form-control" id="inputGroupFile02" name="foto" required>
+                    
+                  </div>
+                
+                <fieldset >Tags:
+                    <div class="form-check form-check-inline">
+  
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="work" name="tags">
+                        <label class="form-check-label" for="inlineCheckbox1">work</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="lifestyle" name="tags">
+                        <label class="form-check-label" for="inlineCheckbox2">lifestyle</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="motor" name="tags">
+                        <label class="form-check-label" for="inlineCheckbox3">motor</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="mobile" name="tags">
+                        <label class="form-check-label" for="inlineCheckbox3">mobile</label>
+                      </div>
+                </fieldset>
+                <hr>
+                <button type="submit" class="btn btn-primary">Guardar</button>
+               </form>
+
+                
+            
+                </div>
+
+
+    </div>
+       
+</div>
+    
+
+    
+</body>
+</html>

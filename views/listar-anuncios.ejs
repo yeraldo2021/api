@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head.ejs') %>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+   <br>
+    <h3 style="text-align: center">Listar Anuncio</h3>
+    <hr>
+    <p>Cantidad de anuncios: <%= anuncios.length %></p>
+       
+   
+          <table class="table">
+            <thead>
+            <tr>
+              <th>#</th>
+              <th>Nombre</th>
+              <th style="text-align: center">Venta</th>
+              <th style="text-align: center">Precio</th>
+              <th style="text-align: center">Foto</th>
+              <th>Tags</th>
+              <th>ID</th>
+            </tr>
+        </thead>
+        <tbody>
+           
+                <tr>
+                 <% anuncios.forEach( anuncio=>{ %>
+                    <td scope="row"><%= cont++ %></td>
+
+                        <td><%= anuncio.nombre %></td>
+                        <td style="text-align: center"><%= anuncio.venta ? 'Si' : 'No' %></td>
+                        <td style="text-align: center"><%= anuncio.precio %>.00 €</td>
+                        <td style="text-align: center"><img src="<%= anuncio.foto %>"></td>
+
+                            <td>
+                                <% if (anuncio.tags) {%> 
+                                    <span class="badge rounded-pill bg-dark"><%= anuncio.tags[0] %></span>
+                                    <span class="badge rounded-pill bg-dark"><%= anuncio.tags[1] %></span>
+                                    <span class="badge rounded-pill bg-dark"><%= anuncio.tags[2] %></span>
+                                    <span class="badge rounded-pill bg-dark"><%= anuncio.tags[3] %></span>
+              
+                             <%   } %>
+                            
+                            
+                            </td>
+                            
+                       
+                 
+                        <td><%= anuncio._id %></td>
+                </tr> 
+            
+            
+                         <% })  %>
+   
+</tbody>
+</table>
+    
+</body>
+</html>
