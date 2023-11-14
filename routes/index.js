@@ -7,8 +7,11 @@ const Mdatos = require("../models/Mdatos");
 const { filterController } = require("../controllers/filter.controller");
 
 console.log("here route!");
-/* GET home page. */
-// Esta es la primera ruta / y el app.js es la segunda ruta
+
+router.get('/', function(req, res, next) {
+  res.render('index', { title: 'NodePop' });
+ 
+});
 
 router.get("/listar", filterController);
 

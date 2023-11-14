@@ -24,11 +24,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // aqui se pone las rutas y se llama a index y users con variables
 
-app.use('/anuncio', indexRouter);
+app.use('/', indexRouter);
 app.use('/public', express.static(`${__dirname}/public/images`))
 
 app.use('/users', usersRouter);
-// esta ruta es primero / despues viene la ruta de api.js
+
 // http://127.0.0.1:3000/api/
 app.use('/api', apidataRouter);
 

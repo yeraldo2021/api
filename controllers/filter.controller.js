@@ -1,4 +1,3 @@
-"anuncio.controller.js";
 const anuncio = require("../models/Mdatos");
 
 async function filterController(req, res) {
@@ -25,7 +24,7 @@ async function filterController(req, res) {
     response = await anuncio.find({}).limit(Number(filters.max));
   } else if (filters.page) {
     const page = Number(filters.page);
-    const limit = 2; // esto cambias para mostrar la cantidad de valores en la pagina
+    const limit = 5; // esto cambias para mostrar la cantidad de valores en la pagina
     const skip = (page - 1) * limit;
 
     response = await anuncio.find({}).skip(skip).limit(limit);

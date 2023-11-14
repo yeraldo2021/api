@@ -1,12 +1,73 @@
 {
     "anuncios": [
-      { 
-        "nombre":"Iphone 14 Pro",
-        "venta":true,
-        "precio":5000,
-        "tags":["lifestyle","mobile"],
-        "foto":"http://localhost:3000/public/foto-1699810991517.png"
-      }
+    {
+       
+        "nombre": "Iphone 14 Pro",
+        "venta": true,
+        "precio": 5000,
+        "foto": "http://localhost:3000/public/foto-1699810991517.png",
+        "tags": [
+        "lifestyle",
+        "mobile"
+        ]
+      
+    },
+    {
+    
+        "nombre": "Yamaha MT-09 2023",
+        "venta": true,
+        "precio": 15000,
+        "tags": [
+        "lifestyle",
+        "motor"
+        ],
+        "foto": "http://localhost:3000/public/foto-1699969447754.png"
+      
+    },
+    {
+    
+        "nombre": "Volkswagen Tiguan 4x4 2023",
+        "venta": true,
+        "precio": 35000,
+        "tags": [
+        "lifestyle",
+        "motor"
+        ],
+        "foto": "http://localhost:3000/public/foto-1699969523743.png"
+      
+    },
+    {
+     
+        "nombre": "Departamento duplex Madrid",
+        "venta": true,
+        "precio": 80000,
+        "tags": [
+        "lifestyle"
+        ],
+        "foto": "http://localhost:3000/public/foto-1699969600822.png"
+        
+    },
+    {
+
+        "nombre": "Programador Web Jr.",
+        "venta": false,
+        "precio": 2000,
+        "tags": [
+        "work"
+        ],
+        "foto": "http://localhost:3000/public/foto-1699969673881.png"
+      
+    },
+    {
+    
+        "nombre": "Smart TV",
+        "venta": true,
+        "precio": 600,
+        "tags": [
+        "lifestyle"
+        ],
+        "foto": "http://localhost:3000/public/foto-1699969727141.png"
    
+    }
     ]
   }

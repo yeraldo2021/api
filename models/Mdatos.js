@@ -20,12 +20,12 @@ anuncioSchema.methods.setImgUrl = function setImgUrl (filename) {
     
   }
 
-anuncioSchema.statics.lista = function(filtro, skip, limit, sort, fields){
-    const query = Mdatos.find(filtro); // devuelve un objeto de tipo query que es un thenable
+anuncioSchema.statics.lista = function( skip, limit, sort){
+   
     query.skip(skip);
     query.limit(limit);
     query.sort(sort);
-    query.select(fields);
+  
     return query.exec();
 }
 
@@ -36,9 +36,8 @@ const Mdatos = mongoose.model('anuncio', anuncioSchema);
 
 // exportar el modelo de agente (opcional)
 
-module.exports = Mdatos;
 
-anuncioSchema.statics.list = async function(filters, startRow, numRows, sortField, includeTotal, cb) {
-};
+
+
 
 module.exports = Mdatos;
